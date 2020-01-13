@@ -10,8 +10,8 @@ import UIKit
 
 class HoroscopeViewController: UITableViewController {
     
-    @IBOutlet weak var horoscopeLabel: UILabel!
-    @IBOutlet weak var moodLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var signLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()

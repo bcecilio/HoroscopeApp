@@ -18,6 +18,7 @@
 		B707BF8E23CCFFDA006594DE /* HoroscopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF8D23CCFFDA006594DE /* HoroscopeData.swift */; };
 		B707BF9023CD0353006594DE /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF8F23CD0353006594DE /* HoroscopeViewController.swift */; };
 		B707BF9223CD03E4006594DE /* UserSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF9123CD03E4006594DE /* UserSign.swift */; };
+		B707BF9423CD1913006594DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF9323CD1913006594DE /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B707BF8D23CCFFDA006594DE /* HoroscopeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeData.swift; sourceTree = "<group>"; };
 		B707BF8F23CD0353006594DE /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
 		B707BF9123CD03E4006594DE /* UserSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSign.swift; sourceTree = "<group>"; };
+		B707BF9323CD1913006594DE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,9 @@
 				B707BF8923CCFCDD006594DE /* HoroscopeAPI.swift */,
 				B707BF8D23CCFFDA006594DE /* HoroscopeData.swift */,
 				B707BF7623CCFC4C006594DE /* ViewController.swift */,
-				B707BF7823CCFC4C006594DE /* Main.storyboard */,
+				B707BF9323CD1913006594DE /* DetailViewController.swift */,
 				B707BF8F23CD0353006594DE /* HoroscopeViewController.swift */,
+				B707BF7823CCFC4C006594DE /* Main.storyboard */,
 				B707BF9123CD03E4006594DE /* UserSign.swift */,
 				B707BF7B23CCFC4E006594DE /* Assets.xcassets */,
 				B707BF7D23CCFC4E006594DE /* LaunchScreen.storyboard */,
@@ -165,6 +168,7 @@
 				B707BF7323CCFC4C006594DE /* AppDelegate.swift in Sources */,
 				B707BF7523CCFC4C006594DE /* SceneDelegate.swift in Sources */,
 				B707BF9223CD03E4006594DE /* UserSign.swift in Sources */,
+				B707BF9423CD1913006594DE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

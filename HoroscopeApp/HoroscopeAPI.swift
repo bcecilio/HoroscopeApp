@@ -13,7 +13,7 @@ struct APIClient {
     
     func getHoroscope(completion: @escaping (Result<Horoscope, AppError>) -> ()) {
         
-        let endpointUrl = "http://sandipbgt.com/theastrologer/api/horoscope/scorpio/today"
+        let endpointUrl = "http://sandipbgt.com/theastrologer/api/horoscope/all/today"
         
         guard let url = URL(string: endpointUrl) else {
             completion(.failure(.badURL(endpointUrl)))

@@ -33,11 +33,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-oy-PIz">
-                                <rect key="frame" x="190" y="533" width="34" height="30"/>
+                                <rect key="frame" x="135" y="529" width="145" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save"/>
+                                <color key="backgroundColor" red="0.96620899438858032" green="0.8447144449570394" blue="0.65434917159208017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="See Your Horoscope!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <segue destination="RPx-Wf-oqB" kind="presentation" id="EBt-31-3e8"/>
+                                    <segue destination="RPx-Wf-oqB" kind="show" id="lry-PZ-009"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,6 +49,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lge-NL-v7s"/>
                     <connections>
+                        <outlet property="horoscopeButton" destination="V9h-oy-PIz" id="znC-zK-ASg"/>
                         <outlet property="nameTextField" destination="xXn-f4-exD" id="e2L-A5-R5x"/>
                         <outlet property="signPicker" destination="0TC-1d-Cqq" id="auu-52-fiS"/>
                     </connections>
@@ -54,46 +58,29 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="gMx-sp-AxI">
             <objects>
-                <viewController id="RPx-Wf-oqB" sceneMemberID="viewController">
+                <viewController id="RPx-Wf-oqB" customClass="DetailViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tAu-Np-Bnc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtF-c0-aRZ">
-                                <rect key="frame" x="20" y="126" width="374" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="Azv-Oa-K9j"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtF-c0-aRZ">
+                                <rect key="frame" x="20" y="183" width="374" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnR-vC-Jep">
-                                <rect key="frame" x="20" y="214" width="53" height="11"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horoscope :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqK-x6-e7e">
-                                <rect key="frame" x="20" y="233" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="26d-oh-Gu5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="horoscope description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-0J-s8P">
-                                <rect key="frame" x="122" y="233" width="272" height="21"/>
+                                <rect key="frame" x="20" y="258.5" width="53" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mood description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t07-S0-YiY">
-                                <rect key="frame" x="81" y="209" width="313" height="21"/>
+                                <rect key="frame" x="81" y="253.5" width="313" height="30.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="313" id="eh8-4h-nBL"/>
                                 </constraints>
@@ -101,33 +88,112 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Horoscope :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqK-x6-e7e">
+                                <rect key="frame" x="20" y="287" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="26d-oh-Gu5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="horoscope description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-0J-s8P">
+                                <rect key="frame" x="122" y="287" width="272" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pta-8D-ITq">
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="Uge-Uq-Y4P" kind="show" id="zbM-mn-3TT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pnR-vC-Jep" firstAttribute="top" secondItem="PtF-c0-aRZ" secondAttribute="bottom" constant="43" id="55c-Wj-TsT"/>
                             <constraint firstItem="BqK-x6-e7e" firstAttribute="top" secondItem="pnR-vC-Jep" secondAttribute="bottom" constant="8" id="8QZ-y5-9yo"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="leading" secondItem="BqK-x6-e7e" secondAttribute="leading" id="9MO-So-xV5"/>
                             <constraint firstItem="BqK-x6-e7e" firstAttribute="baseline" secondItem="A7i-0J-s8P" secondAttribute="baseline" id="FeO-9m-3ff"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="leading" secondItem="pnR-vC-Jep" secondAttribute="leading" id="Hg3-M6-siE"/>
                             <constraint firstItem="BqK-x6-e7e" firstAttribute="firstBaseline" secondItem="A7i-0J-s8P" secondAttribute="firstBaseline" id="J0Y-Xj-o0t"/>
                             <constraint firstItem="t07-S0-YiY" firstAttribute="centerY" secondItem="pnR-vC-Jep" secondAttribute="centerY" id="Uov-vx-opd"/>
                             <constraint firstItem="6UE-sQ-I2O" firstAttribute="trailing" secondItem="t07-S0-YiY" secondAttribute="trailing" constant="20" id="Zvl-b5-QNL"/>
                             <constraint firstItem="t07-S0-YiY" firstAttribute="leading" secondItem="pnR-vC-Jep" secondAttribute="trailing" constant="8" id="b56-6u-fAu"/>
-                            <constraint firstItem="6UE-sQ-I2O" firstAttribute="trailing" secondItem="PtF-c0-aRZ" secondAttribute="trailing" constant="20" id="drt-ga-H8q"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="leading" secondItem="6UE-sQ-I2O" secondAttribute="leading" constant="20" id="i10-Tm-BUx"/>
                             <constraint firstItem="6UE-sQ-I2O" firstAttribute="bottom" secondItem="BqK-x6-e7e" secondAttribute="bottom" constant="554" id="lBN-qR-RMs"/>
                             <constraint firstItem="A7i-0J-s8P" firstAttribute="leading" secondItem="BqK-x6-e7e" secondAttribute="trailing" constant="8" id="u3H-gJ-XOd"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="top" secondItem="6UE-sQ-I2O" secondAttribute="top" constant="126" id="uFA-51-Xtj"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="trailing" secondItem="A7i-0J-s8P" secondAttribute="trailing" id="w9b-4w-iQ5"/>
                             <constraint firstItem="BqK-x6-e7e" firstAttribute="top" secondItem="t07-S0-YiY" secondAttribute="bottom" constant="3" id="yIT-QZ-v0G"/>
-                            <constraint firstItem="PtF-c0-aRZ" firstAttribute="centerX" secondItem="tAu-Np-Bnc" secondAttribute="centerX" id="ywS-D7-EyY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6UE-sQ-I2O"/>
                     </view>
+                    <navigationItem key="navigationItem" id="byp-5R-cu9"/>
+                    <connections>
+                        <outlet property="horoscopeDescription" destination="A7i-0J-s8P" id="Vkk-zb-noO"/>
+                        <outlet property="moodDescription" destination="t07-S0-YiY" id="ehs-GL-7Ns"/>
+                        <outlet property="saveButton" destination="Pta-8D-ITq" id="FNR-qC-IAz"/>
+                        <outlet property="signLabel" destination="PtF-c0-aRZ" id="Gcs-FD-0g6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snZ-gD-pLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="118"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="117.85714285714285"/>
+        </scene>
+        <!--Horoscope View Controller-->
+        <scene sceneID="kXT-Hd-MsY">
+            <objects>
+                <tableViewController id="Uge-Uq-Y4P" customClass="HoroscopeViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1dh-xM-MgA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="nXB-h7-tqU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="U5o-s4-ATC">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U5o-s4-ATC" id="j0j-UY-UAh">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dy-Z4-Nrm">
+                                                    <rect key="frame" x="20" y="14.5" width="45" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9R-8b-POD">
+                                                    <rect key="frame" x="360" y="14.5" width="34" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4dy-Z4-Nrm" firstAttribute="leading" secondItem="j0j-UY-UAh" secondAttribute="leadingMargin" id="9IY-D0-tqE"/>
+                                                <constraint firstAttribute="trailing" secondItem="R9R-8b-POD" secondAttribute="trailing" constant="20" id="MN5-7O-0eu"/>
+                                                <constraint firstItem="R9R-8b-POD" firstAttribute="centerY" secondItem="j0j-UY-UAh" secondAttribute="centerY" id="ZaW-cg-909"/>
+                                                <constraint firstItem="4dy-Z4-Nrm" firstAttribute="centerY" secondItem="j0j-UY-UAh" secondAttribute="centerY" id="dAz-kT-oc5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Uge-Uq-Y4P" id="UIT-cr-DgU"/>
+                            <outlet property="delegate" destination="Uge-Uq-Y4P" id="HdZ-zX-iyW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7jR-tt-YUk"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="4dy-Z4-Nrm" id="JkX-72-Vsd"/>
+                        <outlet property="signLabel" destination="R9R-8b-POD" id="uU4-y5-lSg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-xv-skJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBe-sk-Dy1">
