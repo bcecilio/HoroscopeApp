@@ -72,9 +72,7 @@
 				B707BF7423CCFC4C006594DE /* SceneDelegate.swift */,
 				B707BF8923CCFCDD006594DE /* HoroscopeAPI.swift */,
 				B707BF8D23CCFFDA006594DE /* HoroscopeData.swift */,
-				B707BF7623CCFC4C006594DE /* ViewController.swift */,
-				B707BF9323CD1913006594DE /* DetailViewController.swift */,
-				B707BF8F23CD0353006594DE /* HoroscopeViewController.swift */,
+				B707BF9523CD2507006594DE /* VC's */,
 				B707BF7823CCFC4C006594DE /* Main.storyboard */,
 				B707BF9123CD03E4006594DE /* UserSign.swift */,
 				B707BF7B23CCFC4E006594DE /* Assets.xcassets */,
@@ -82,6 +80,16 @@
 				B707BF8023CCFC4E006594DE /* Info.plist */,
 			);
 			path = HoroscopeApp;
+			sourceTree = "<group>";
+		};
+		B707BF9523CD2507006594DE /* VC's */ = {
+			isa = PBXGroup;
+			children = (
+				B707BF7623CCFC4C006594DE /* ViewController.swift */,
+				B707BF9323CD1913006594DE /* DetailViewController.swift */,
+				B707BF8F23CD0353006594DE /* HoroscopeViewController.swift */,
+			);
+			path = "VC's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -26,13 +26,7 @@ class ViewController: UIViewController {
         nameTextField.delegate = self
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVC = segue.destination as? DetailViewController else {
-            return
-        }
-        detailVC.name = name
-        detailVC.sign = sign
-    }
+    preparefor
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {

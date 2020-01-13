@@ -40,6 +40,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="horoscopeButtonPressedWithSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tdq-Mx-vfW"/>
                                     <segue destination="RPx-Wf-oqB" kind="show" id="lry-PZ-009"/>
                                 </connections>
                             </button>
@@ -49,7 +50,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lge-NL-v7s"/>
                     <connections>
-                        <outlet property="horoscopeButton" destination="V9h-oy-PIz" id="znC-zK-ASg"/>
+                        <outlet property="horoscopeButton" destination="V9h-oy-PIz" id="CB6-q5-F6o"/>
                         <outlet property="nameTextField" destination="xXn-f4-exD" id="e2L-A5-R5x"/>
                         <outlet property="signPicker" destination="0TC-1d-Cqq" id="auu-52-fiS"/>
                     </connections>

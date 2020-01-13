@@ -21,6 +21,5 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signLabel.text = name?.name
-        
     }
 }
