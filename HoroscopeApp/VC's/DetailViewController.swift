@@ -20,6 +20,13 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signLabel.text = name?.name
+    }
+    
+    func updateUI() {
+        guard let detailName = name else {
+            print("no info found")
+            return
+        }
+        
     }
 }

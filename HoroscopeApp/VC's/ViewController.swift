@@ -16,8 +16,15 @@ class ViewController: UIViewController {
     
     var signs: [String] = ["Aries", "Taurus", "Scorpio", "Gemini", "Libra", "Leo", "Cancer", "Sagittarius", "Aquarius", "Capricorn", "Virgo", "Pisces"]
     
+    var signTwo = [Horoscope]() {
+        didSet {
+            DispatchQueue.main.async {
+                
+            }
+        }
+    }
+    
     var name : Name!
-    var sign : Name!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +33,16 @@ class ViewController: UIViewController {
         nameTextField.delegate = self
     }
     
-    preparefor
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else {
+            return
+        }
+        detailVC.name = name
+    }
+    
+    func loadData() {
+        HoroscopeAPI.getHoroscope(<#T##self: HoroscopeAPI##HoroscopeAPI#>)
+    }
 }
 
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {

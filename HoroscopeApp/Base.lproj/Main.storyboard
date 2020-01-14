@@ -40,7 +40,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="horoscopeButtonPressedWithSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tdq-Mx-vfW"/>
                                     <segue destination="RPx-Wf-oqB" kind="show" id="lry-PZ-009"/>
                                 </connections>
                             </button>
@@ -50,7 +49,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="lge-NL-v7s"/>
                     <connections>
-                        <outlet property="horoscopeButton" destination="V9h-oy-PIz" id="CB6-q5-F6o"/>
                         <outlet property="nameTextField" destination="xXn-f4-exD" id="e2L-A5-R5x"/>
                         <outlet property="signPicker" destination="0TC-1d-Cqq" id="auu-52-fiS"/>
                     </connections>
@@ -74,32 +72,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnR-vC-Jep">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mood :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnR-vC-Jep">
                                 <rect key="frame" x="20" y="258.5" width="53" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mood description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t07-S0-YiY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mood description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t07-S0-YiY">
                                 <rect key="frame" x="81" y="253.5" width="313" height="30.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="313" id="eh8-4h-nBL"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Horoscope :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqK-x6-e7e">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horoscope :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BqK-x6-e7e">
                                 <rect key="frame" x="20" y="287" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="94" id="26d-oh-Gu5"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" ambiguous="YES" text="horoscope description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-0J-s8P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="horoscope description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7i-0J-s8P">
                                 <rect key="frame" x="122" y="287" width="272" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -114,17 +110,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="BqK-x6-e7e" firstAttribute="top" secondItem="pnR-vC-Jep" secondAttribute="bottom" constant="8" id="8QZ-y5-9yo"/>
-                            <constraint firstItem="BqK-x6-e7e" firstAttribute="baseline" secondItem="A7i-0J-s8P" secondAttribute="baseline" id="FeO-9m-3ff"/>
-                            <constraint firstItem="BqK-x6-e7e" firstAttribute="firstBaseline" secondItem="A7i-0J-s8P" secondAttribute="firstBaseline" id="J0Y-Xj-o0t"/>
-                            <constraint firstItem="t07-S0-YiY" firstAttribute="centerY" secondItem="pnR-vC-Jep" secondAttribute="centerY" id="Uov-vx-opd"/>
-                            <constraint firstItem="6UE-sQ-I2O" firstAttribute="trailing" secondItem="t07-S0-YiY" secondAttribute="trailing" constant="20" id="Zvl-b5-QNL"/>
-                            <constraint firstItem="t07-S0-YiY" firstAttribute="leading" secondItem="pnR-vC-Jep" secondAttribute="trailing" constant="8" id="b56-6u-fAu"/>
-                            <constraint firstItem="6UE-sQ-I2O" firstAttribute="bottom" secondItem="BqK-x6-e7e" secondAttribute="bottom" constant="554" id="lBN-qR-RMs"/>
-                            <constraint firstItem="A7i-0J-s8P" firstAttribute="leading" secondItem="BqK-x6-e7e" secondAttribute="trailing" constant="8" id="u3H-gJ-XOd"/>
-                            <constraint firstItem="BqK-x6-e7e" firstAttribute="top" secondItem="t07-S0-YiY" secondAttribute="bottom" constant="3" id="yIT-QZ-v0G"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6UE-sQ-I2O"/>
                     </view>
                     <navigationItem key="navigationItem" id="byp-5R-cu9"/>

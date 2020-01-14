@@ -9,9 +9,11 @@
 import Foundation
 import NetworkHelper
 
-struct APIClient {
+struct HoroscopeAPI {
     
-    func getHoroscope(completion: @escaping (Result<Horoscope, AppError>) -> ()) {
+    func getHoroscope(for searchQuery: String, completion: @escaping (Result<Horoscope, AppError>) -> ()) {
+        
+//        let searchSign = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "scorpio"
         
         let endpointUrl = "http://sandipbgt.com/theastrologer/api/horoscope/all/today"
         
