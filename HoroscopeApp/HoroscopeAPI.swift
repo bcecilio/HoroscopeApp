@@ -11,7 +11,7 @@ import NetworkHelper
 
 struct HoroscopeAPI {
     
-    func getHoroscope(for searchQuery: String, completion: @escaping (Result<Horoscope, AppError>) -> ()) {
+    func getHoroscope(completion: @escaping (Result<[Horoscope], AppError>) -> ()) {
         
 //        let searchSign = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "scorpio"
         
@@ -28,7 +28,7 @@ struct HoroscopeAPI {
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
                 do {
-                    let horoscopeData = try JSONDecoder().decode(Horoscope.self, from: data)
+                    let horoscopeData = try JSONDecoder().decode([Horoscope].self, from: data)
                     completion(.success(horoscopeData))
                 } catch {
                     completion(.failure(.decodingError(error)))

@@ -10,17 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var signPicker: UIPickerView!
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var horoscopeButton: UIButton!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var signs: [String] = ["Aries", "Taurus", "Scorpio", "Gemini", "Libra", "Leo", "Cancer", "Sagittarius", "Aquarius", "Capricorn", "Virgo", "Pisces"]
     
     var signTwo = [Horoscope]() {
         didSet {
-            DispatchQueue.main.async {
-                
-            }
+            
         }
     }
     
@@ -28,9 +24,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        signPicker.delegate = self
-        signPicker.dataSource = self
-        nameTextField.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,33 +32,19 @@ class ViewController: UIViewController {
         }
         detailVC.name = name
     }
-    
-    func loadData() {
-        HoroscopeAPI.getHoroscope(<#T##self: HoroscopeAPI##HoroscopeAPI#>)
-    }
+
 }
 
-extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return signs.count
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return signs[row]
-    }
-}
-
-extension ViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        name.name = nameTextField.text ?? ""
-        return true
-    }
 }
 
