@@ -1,0 +1,3 @@
+# HoroscopeApp
+
+Practicing Persistance
