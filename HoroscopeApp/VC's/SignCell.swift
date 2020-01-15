@@ -15,5 +15,6 @@ class SignCell: UICollectionViewCell {
     
     func configureCell(sunSign: Horoscope) {
         signLabel.text = sunSign.sunsign
+        signImage.image = UIImage(systemName: "exclamationmark-triangle")
     }
 }

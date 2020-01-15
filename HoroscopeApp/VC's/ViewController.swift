@@ -43,7 +43,8 @@ class ViewController: UIViewController {
             case .failure(_):
                 print("no data")
             case .success(let sunSigns):
-                self.signTwo = [sunSigns]
+                self.signTwo = sunSigns
+                dump(sunSigns)
             }
         }
     }
@@ -58,13 +59,29 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "signCell", for: indexPath) as? SignCell else {
-            fatalError("could not dequeue")
+            fatalError("could not downcast SignCell")
         }
         let signCell = signTwo[indexPath.row]
         cell.configureCell(sunSign: signCell)
         return cell
     }
 
-
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let interItemSpacing: CGFloat = 3 // space between items
+        let maxWidth = UIScreen.main.bounds.size.width // device's width
+        let numberOfitems: CGFloat = 1 // items
+        let totalSpacing: CGFloat = numberOfitems * interItemSpacing
+        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfitems
+        
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 8, left: 2, bottom: 8, right: 2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
 }
 

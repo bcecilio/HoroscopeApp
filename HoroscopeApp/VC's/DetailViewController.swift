@@ -12,13 +12,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var moodDescription: UILabel!
-    @IBOutlet weak var horoscopeDescription: UILabel!
+    @IBOutlet weak var horoscopeDescription: UITextView!
     @IBOutlet weak var signLabel: UILabel!
     
     var signDetail: Horoscope!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
     
     func updateUI() {
