@@ -11,40 +11,60 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nameTextField: UITextField!
     
     var signs: [String] = ["Aries", "Taurus", "Scorpio", "Gemini", "Libra", "Leo", "Cancer", "Sagittarius", "Aquarius", "Capricorn", "Virgo", "Pisces"]
     
     var signTwo = [Horoscope]() {
         didSet {
-            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
-    
-    var name : Name!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVC = segue.destination as? DetailViewController else {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = collectionView.indexPathsForSelectedItems!.first else {
             return
         }
-        detailVC.name = name
+        detailVC.signDetail = signTwo[indexPath.row]
+    }
+    
+    func loadData() {
+        HoroscopeAPI.getHoroscope { (result) in
+            switch result {
+            case .failure(_):
+                print("no data")
+            case .success(let sunSigns):
+                self.signTwo = [sunSigns]
+            }
+        }
     }
 
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return signTwo.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "signCell", for: indexPath) as? SignCell else {
+            fatalError("could not dequeue")
+        }
+        let signCell = signTwo[indexPath.row]
+        cell.configureCell(sunSign: signCell)
+        return cell
     }
-    
-    
+
+
 }
 

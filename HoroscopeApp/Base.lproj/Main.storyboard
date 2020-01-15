@@ -16,8 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0cp-y5-hWf">
+                                <rect key="frame" x="120" y="203" width="175" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats your Sign?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tw0-sw-NZ1">
+                                <rect key="frame" x="129" y="140" width="156" height="23"/>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-OS-jVn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="610"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qyC-6Z-qLz">
                                     <size key="itemSize" width="157" height="157"/>
@@ -26,7 +37,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="signCell" id="G7n-c2-dYf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="signCell" id="G7n-c2-dYf" customClass="SignCell" customModule="HoroscopeApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="157" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="azR-9p-4KU">
@@ -36,6 +47,13 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4H0-OR-9s3">
                                                     <rect key="frame" x="0.0" y="0.0" width="157" height="157"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pR-6U-N4n">
+                                                    <rect key="frame" x="8" y="128" width="141" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4H0-OR-9s3" firstAttribute="leading" secondItem="azR-9p-4KU" secondAttribute="leading" id="HvU-Hx-1hw"/>
@@ -45,20 +63,34 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="157" height="157"/>
+                                        <connections>
+                                            <outlet property="signImage" destination="4H0-OR-9s3" id="Y1e-3p-2fg"/>
+                                            <outlet property="signLabel" destination="6pR-6U-N4n" id="Zas-AR-JFu"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ENM-OS-jVn" secondAttribute="bottom" id="89D-mD-1gd"/>
-                            <constraint firstItem="ENM-OS-jVn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P9l-jk-a5L"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ENM-OS-jVn" secondAttribute="trailing" id="QzN-T4-5zD"/>
-                            <constraint firstItem="ENM-OS-jVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="v0a-ff-M2s"/>
+                            <constraint firstItem="Tw0-sw-NZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="5lf-Rv-2mu"/>
+                            <constraint firstItem="0cp-y5-hWf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="ENS-as-0Hi"/>
+                            <constraint firstItem="0cp-y5-hWf" firstAttribute="top" secondItem="Tw0-sw-NZ1" secondAttribute="bottom" constant="40" id="FMj-WG-11P"/>
+                            <constraint firstItem="Tw0-sw-NZ1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="Rdv-gg-h7b"/>
+                            <constraint firstItem="ENM-OS-jVn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VRP-oG-fEC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0cp-y5-hWf" secondAttribute="trailing" constant="119" id="ZLI-zo-20c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tw0-sw-NZ1" secondAttribute="trailing" constant="129" id="gPQ-tj-Rir"/>
+                            <constraint firstItem="ENM-OS-jVn" firstAttribute="top" secondItem="0cp-y5-hWf" secondAttribute="bottom" constant="15" id="rZs-hW-pcx"/>
+                            <constraint firstItem="ENM-OS-jVn" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wyb-W0-ORt"/>
+                            <constraint firstItem="ENM-OS-jVn" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zgg-9b-9Q5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="lge-NL-v7s"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ENM-OS-jVn" id="Jpv-rF-9WQ"/>
+                        <outlet property="nameTextField" destination="0cp-y5-hWf" id="Hwb-1c-xm7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +151,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-xv-skJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2638" y="118"/>
+            <point key="canvasLocation" x="2735" y="118"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBe-sk-Dy1">

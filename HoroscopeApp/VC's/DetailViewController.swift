@@ -15,15 +15,14 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var horoscopeDescription: UILabel!
     @IBOutlet weak var signLabel: UILabel!
     
-    var name: Name?
-    var sign: Name?
+    var signDetail: Horoscope!
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     func updateUI() {
-        guard let detailName = name else {
+        guard let detailName = signDetail else {
             print("no info found")
             return
         }
