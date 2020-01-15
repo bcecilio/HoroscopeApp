@@ -15,6 +15,29 @@ class SignCell: UICollectionViewCell {
     
     func configureCell(sunSign: Horoscope) {
         signLabel.text = sunSign.sunsign
-        signImage.image = UIImage(systemName: "exclamationmark-triangle")
+        
+        if signLabel.text == "Scorpio" {
+            signImage.image = #imageLiteral(resourceName: "Scorpio")
+        } else if signLabel.text == "Sagittarius" {
+            signImage.image = #imageLiteral(resourceName: "Sagittarius")
+        } else if signLabel.text == "Cancer" {
+            signImage.image = #imageLiteral(resourceName: "Cancer")
+        } else if signLabel.text == "Gemini" {
+            signImage.image = #imageLiteral(resourceName: "Gemini")
+        } else if signLabel.text == "Leo" {
+            signImage.image = #imageLiteral(resourceName: "Leo")
+        } else if signLabel.text == "Libra" {
+            signImage.image = #imageLiteral(resourceName: "Libra")
+        } else if signLabel.text == "Aries" {
+            signImage.image = #imageLiteral(resourceName: "Aries")
+        } else if signLabel.text == "Pisces" {
+            signImage.image = #imageLiteral(resourceName: "Pisces")
+        } else if signLabel.text == "Taurus" {
+            signImage.image = #imageLiteral(resourceName: "Taurus")
+        } else if signLabel.text == "Aquarius" {
+            signImage.image = #imageLiteral(resourceName: "Aquarius")
+        } else if signLabel.text == "Virgo" {
+            signImage.image = #imageLiteral(resourceName: "Virgo")
+        }
     }
 }

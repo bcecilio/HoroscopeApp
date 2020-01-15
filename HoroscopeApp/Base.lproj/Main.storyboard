@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-OS-jVn">
-                                <rect key="frame" x="0.0" y="252" width="414" height="610"/>
+                                <rect key="frame" x="0.0" y="252" width="414" height="561"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qyC-6Z-qLz">
                                     <size key="itemSize" width="157" height="157"/>
@@ -66,7 +66,7 @@
                                         <connections>
                                             <outlet property="signImage" destination="4H0-OR-9s3" id="Y1e-3p-2fg"/>
                                             <outlet property="signLabel" destination="6pR-6U-N4n" id="Zas-AR-JFu"/>
-                                            <segue destination="f6u-tN-Px5" kind="show" id="QgO-qH-8ks"/>
+                                            <segue destination="f6u-tN-Px5" kind="presentation" id="Zbk-mQ-8AO"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,6 +87,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="qZN-bs-QGX"/>
                     <navigationItem key="navigationItem" id="lge-NL-v7s"/>
                     <connections>
                         <outlet property="collectionView" destination="ENM-OS-jVn" id="Jpv-rF-9WQ"/>
@@ -95,14 +96,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
+            <point key="canvasLocation" x="1957.9710144927537" y="117.85714285714285"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="hTk-Gp-3Xe">
             <objects>
                 <viewController id="f6u-tN-Px5" customClass="DetailViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="94j-sA-dgY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOX-Y2-7a0">
@@ -128,6 +129,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-WG-YO2">
+                                <rect key="frame" x="184" y="492" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="AIT-ND-ir1"/>
@@ -141,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="goL-gB-zL7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1836.2318840579712" y="117.85714285714285"/>
+            <point key="canvasLocation" x="2780" y="-216"/>
         </scene>
         <!--Horoscope View Controller-->
         <scene sceneID="kXT-Hd-MsY">
@@ -198,11 +204,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-xv-skJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="118"/>
+            <point key="canvasLocation" x="2780" y="468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBe-sk-Dy1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-ia-QGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nX4-zb-pcs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i8G-c5-9b8">
@@ -211,12 +218,29 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xSS-nm-CYD"/>
+                        <segue destination="YCq-Ai-DVo" kind="relationship" relationship="rootViewController" id="xSS-nm-CYD"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-ia-QGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hlG-Zh-kQx">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YCq-Ai-DVo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hyZ-Zn-hab"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xjs-Cy-E2V">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Rdi-SQ-wvz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPA-AV-htz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="117.85714285714285"/>
         </scene>
     </scenes>
 </document>
