@@ -22,10 +22,12 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
-        guard let detailName = signDetail else {
+        guard let sunSign = signDetail else {
             print("no info found")
             return
         }
-        
+        horoscopeDescription.text = sunSign.horoscope
+        moodDescription.text = sunSign.meta.mood
+        signLabel.text = sunSign.sunsign
     }
 }
