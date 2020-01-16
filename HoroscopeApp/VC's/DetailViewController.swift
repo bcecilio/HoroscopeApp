@@ -15,7 +15,11 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var horoscopeDescription: UITextView!
     @IBOutlet weak var signLabel: UILabel!
     
-    var signDetail: Horoscope!
+    var signDetail: Horoscope! {
+        didSet {
+            UserSettings.shared.updateSign(with: Sign(rawValue: (signDetail?.sunsign)!)!)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,4 +35,11 @@ class DetailViewController: UIViewController {
         moodDescription.text = sunSign.meta.mood
         signLabel.text = sunSign.sunsign
     }
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.showAlert(title: "Saved!", message: "Your horoscope has been successfully saved!")
+        }
+    }
+    
 }

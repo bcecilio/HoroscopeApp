@@ -26,19 +26,25 @@ struct PreferenceKey {
 }
 
 struct Name {
-    var name: String
-    var sign: String
+    static let name = "name"
 }
 
 class UserSettings {
     
     private init() {}
     
-    static let standard = UserDefaults.standard
+    private let standard = UserDefaults.standard
     
-    let shared = UserSettings()
+    static let shared = UserSettings()
     
     func updateSign(with unit: Sign) {
-        UserSettings.standard.set(unit.rawValue, forKey: PreferenceKey.sign)
+        standard.set(unit.rawValue, forKey: PreferenceKey.sign)
+    }
+    
+    func getSign() -> Sign? {
+        guard let sunSign = standard.object(forKey: PreferenceKey.sign) as? String else {
+            return nil
+        }
+        return Sign(rawValue: sunSign)
     }
 }

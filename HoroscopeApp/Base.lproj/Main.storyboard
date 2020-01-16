@@ -130,9 +130,12 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jag-WG-YO2">
-                                <rect key="frame" x="184" y="492" width="46" height="30"/>
+                                <rect key="frame" x="190" y="492" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="f6u-tN-Px5" eventType="touchUpInside" id="hXm-CG-90A"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -149,67 +152,9 @@
             </objects>
             <point key="canvasLocation" x="2780" y="-216"/>
         </scene>
-        <!--Horoscope View Controller-->
-        <scene sceneID="kXT-Hd-MsY">
-            <objects>
-                <tableViewController id="Uge-Uq-Y4P" customClass="HoroscopeViewController" customModule="HoroscopeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1dh-xM-MgA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <sections>
-                            <tableViewSection id="nXB-h7-tqU">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="U5o-s4-ATC">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U5o-s4-ATC" id="j0j-UY-UAh">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dy-Z4-Nrm">
-                                                    <rect key="frame" x="20" y="14.5" width="45" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9R-8b-POD">
-                                                    <rect key="frame" x="360" y="14.5" width="34" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="4dy-Z4-Nrm" firstAttribute="leading" secondItem="j0j-UY-UAh" secondAttribute="leadingMargin" id="9IY-D0-tqE"/>
-                                                <constraint firstAttribute="trailing" secondItem="R9R-8b-POD" secondAttribute="trailing" constant="20" id="MN5-7O-0eu"/>
-                                                <constraint firstItem="R9R-8b-POD" firstAttribute="centerY" secondItem="j0j-UY-UAh" secondAttribute="centerY" id="ZaW-cg-909"/>
-                                                <constraint firstItem="4dy-Z4-Nrm" firstAttribute="centerY" secondItem="j0j-UY-UAh" secondAttribute="centerY" id="dAz-kT-oc5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="Uge-Uq-Y4P" id="UIT-cr-DgU"/>
-                            <outlet property="delegate" destination="Uge-Uq-Y4P" id="HdZ-zX-iyW"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="7jR-tt-YUk"/>
-                    <connections>
-                        <outlet property="nameLabel" destination="4dy-Z4-Nrm" id="JkX-72-Vsd"/>
-                        <outlet property="signLabel" destination="R9R-8b-POD" id="uU4-y5-lSg"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DuS-xv-skJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2780" y="468"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="gBe-sk-Dy1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-ia-QGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nX4-zb-pcs" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i8G-c5-9b8">
@@ -221,6 +166,7 @@
                         <segue destination="YCq-Ai-DVo" kind="relationship" relationship="rootViewController" id="xSS-nm-CYD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-ia-QGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
         </scene>
@@ -231,6 +177,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="hyZ-Zn-hab"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xjs-Cy-E2V">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

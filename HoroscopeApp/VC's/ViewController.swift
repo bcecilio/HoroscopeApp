@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nameTextField: UITextField!
     
-    var signs: [String] = ["Aries", "Taurus", "Scorpio", "Gemini", "Libra", "Leo", "Cancer", "Sagittarius", "Aquarius", "Capricorn", "Virgo", "Pisces"]
-    
     var signTwo = [Horoscope]() {
         didSet {
             DispatchQueue.main.async {
@@ -67,9 +65,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacing: CGFloat = 3 // space between items
+        let interItemSpacing: CGFloat = 10 // space between items
         let maxWidth = UIScreen.main.bounds.size.width // device's width
-        let numberOfitems: CGFloat = 1 // items
+        let numberOfitems: CGFloat = 2 // items
         let totalSpacing: CGFloat = numberOfitems * interItemSpacing
         let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfitems
         

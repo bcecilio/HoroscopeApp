@@ -20,6 +20,7 @@
 		B707BF9223CD03E4006594DE /* UserSign.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF9123CD03E4006594DE /* UserSign.swift */; };
 		B707BF9423CD1913006594DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707BF9323CD1913006594DE /* DetailViewController.swift */; };
 		B71616F723CFB25500A4CEE7 /* SignCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71616F623CFB25400A4CEE7 /* SignCell.swift */; };
+		B7D5B67D23D0D5F100970C0B /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5B67C23D0D5F100970C0B /* Alerts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		B707BF9123CD03E4006594DE /* UserSign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSign.swift; sourceTree = "<group>"; };
 		B707BF9323CD1913006594DE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B71616F623CFB25400A4CEE7 /* SignCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignCell.swift; sourceTree = "<group>"; };
+		B7D5B67C23D0D5F100970C0B /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				B707BF7B23CCFC4E006594DE /* Assets.xcassets */,
 				B707BF7D23CCFC4E006594DE /* LaunchScreen.storyboard */,
 				B707BF8023CCFC4E006594DE /* Info.plist */,
+				B7D5B67C23D0D5F100970C0B /* Alerts.swift */,
 			);
 			path = HoroscopeApp;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				B707BF9023CD0353006594DE /* HoroscopeViewController.swift in Sources */,
 				B707BF7323CCFC4C006594DE /* AppDelegate.swift in Sources */,
 				B707BF7523CCFC4C006594DE /* SceneDelegate.swift in Sources */,
+				B7D5B67D23D0D5F100970C0B /* Alerts.swift in Sources */,
 				B707BF9223CD03E4006594DE /* UserSign.swift in Sources */,
 				B71616F723CFB25500A4CEE7 /* SignCell.swift in Sources */,
 				B707BF9423CD1913006594DE /* DetailViewController.swift in Sources */,
