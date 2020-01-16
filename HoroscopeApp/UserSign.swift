@@ -26,7 +26,11 @@ struct PreferenceKey {
 }
 
 struct Name {
-    static let name = "name"
+    static var name = "name"
+}
+
+struct UserName {
+    var userName: String
 }
 
 class UserSettings {
