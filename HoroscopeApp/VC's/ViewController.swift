@@ -27,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        nameTextField.delegate = self
         loadData()
     }
     
@@ -63,16 +64,13 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFl
         }
         let signCell = signTwo[indexPath.row]
         cell.configureCell(sunSign: signCell)
+        cell.layer.cornerRadius = 6
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacing: CGFloat = 10 // space between items
-        let maxWidth = UIScreen.main.bounds.size.width // device's width
-        let numberOfitems: CGFloat = 2 // items
-        let totalSpacing: CGFloat = numberOfitems * interItemSpacing
-        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfitems
-        
+        let maxWidth: CGFloat = UIScreen.main.bounds.size.width
+        let itemWidth: CGFloat = maxWidth * 0.30
         return CGSize(width: itemWidth, height: itemWidth)
     }
     

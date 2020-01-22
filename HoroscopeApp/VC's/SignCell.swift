@@ -38,6 +38,8 @@ class SignCell: UICollectionViewCell {
             signImage.image = #imageLiteral(resourceName: "Aquarius")
         } else if signLabel.text == "Virgo" {
             signImage.image = #imageLiteral(resourceName: "Virgo")
+        } else if signLabel.text == "Capricorn" {
+            signImage.image = #imageLiteral(resourceName: "Capricorn")
         }
     }
 }
